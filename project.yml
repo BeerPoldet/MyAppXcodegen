@@ -17,6 +17,9 @@ targets:
       iOS: 14.0
     sources: [MyApp]
     scheme:
+      # These lines don't work
+      # testTargets:
+      #   - MyLib
       configVariants:
         - Test
     info:
