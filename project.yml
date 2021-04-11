@@ -1,10 +1,26 @@
 name: MyApp
 
+options:
+  bundleIdPrefix: com.test.myapp
+  deploymentTarget:
+    iOS: 14.0
+
+configs:
+  Test Debug: debug
+  Test Release: release
+
 targets:
   MyApp:
     type: application
     platform: iOS
+    deploymentTarget:
+      iOS: 14.0
     sources: [MyApp]
+    scheme:
+      configVariants:
+        - Test
+    info:
+      path: App/NotifyMe_iOS/Info.plist
     dependencies:
     - package: MyLib  
       product: MyLib
