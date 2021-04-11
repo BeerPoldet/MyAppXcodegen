@@ -1,0 +1,15 @@
+name: MyApp
+
+targets:
+  MyApp:
+    type: application
+    platform: iOS
+    sources: [MyApp]
+    dependencies:
+    - package: MyLib  
+      product: MyLib
+
+packages:
+  MyLib:
+    path: MyLib
+
